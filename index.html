@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associação Projeto Só Por Amor</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins & Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFFBF7; /* Um tom de branco aconchegante */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        .text-lora {
+            font-family: 'Lora', serif;
+        }
+        .brand-pink { color: #E5398D; }
+        .brand-pink-bg { background-color: #E5398D; }
+        .brand-pink-bg-hover:hover { background-color: #C22A72; }
+        .brand-teal { color: #14B8A6; }
+        .brand-teal-bg { background-color: #14B8A6; }
+        .brand-teal-bg-hover:hover { background-color: #0F766E; }
+        .hero-section {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://placehold.co/1600x900/E5398D/FFFFFF?text=Só+Por+Amor');
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px 0 rgba(229, 57, 141, 0.4);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px 0 rgba(229, 57, 141, 0.5);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #E5398D;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex items-center space-x-2">
+                    <i data-lucide="heart-handshake" class="brand-pink w-8 h-8"></i>
+                    <span class="text-xl font-bold text-gray-800">Projeto <span class="brand-pink">Só Por Amor</span></span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#sobre" class="text-gray-600 hover:text-brand-pink transition duration-300">Sobre Nós</a>
+                    <a href="#projetos" class="text-gray-600 hover:text-brand-pink transition duration-300">Nossos Projetos</a>
+                    <a href="#como-ajudar" class="text-gray-600 hover:text-brand-pink transition duration-300">Como Ajudar</a>
+                    <a href="#contato" class="text-gray-600 hover:text-brand-pink transition duration-300">Contato</a>
+                </nav>
+                <a href="#como-ajudar" class="hidden md:inline-block bg-brand-pink text-white font-semibold px-5 py-2 rounded-full brand-pink-bg-hover transition duration-300">
+                    Doe Agora
+                </a>
+                <button id="mobile-menu-button" class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#sobre" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Sobre Nós</a>
+            <a href="#projetos" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Nossos Projetos</a>
+            <a href="#como-ajudar" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Como Ajudar</a>
+            <a href="#contato" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Contato</a>
+            <div class="p-4">
+                <a href="#como-ajudar" class="block text-center bg-brand-pink text-white font-semibold px-5 py-2 rounded-full brand-pink-bg-hover transition duration-300">
+                    Doe Agora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-white">
+            <div class="container mx-auto px-6 py-32 md:py-48 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Espalhando Amor, <br>Transformando Vidas.</h1>
+                <p class="text-lg md:text-xl text-lora max-w-3xl mx-auto mb-8">
+                    Junte-se a nós na missão de levar esperança, cuidado e oportunidade para crianças e famílias em situação de vulnerabilidade.
+                </p>
+                <a href="#projetos" class="cta-button bg-brand-pink text-white font-bold py-4 px-10 rounded-full text-lg brand-pink-bg-hover">
+                    Conheça Nossos Projetos
+                </a>
+            </div>
+        </section>
+
+        <!-- Sobre Nós Section -->
+        <section id="sobre" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/14B8A6/FFFFFF?text=Nossa+História" alt="Voluntários da associação" class="rounded-xl shadow-lg w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossa História de Amor e Cuidado</h2>
+                        <p class="text-lora text-gray-600 mb-6 leading-relaxed">
+                           A Associação Projeto Só Por Amor surgiu da iniciativa de um grupo de voluntários que, por muitos anos, atuava de forma solidária. Em 23 de junho de 2018, decidiram oficializar suas atividades, fundando a associação para apoiar crianças, adolescentes, idosos, mães e gestantes em situação de vulnerabilidade. Contando com doações de voluntários e parceiros, a associação se consolidou como uma referência socioassistencial, realizando ações concretas para o bem-estar das famílias.
+                        </p>
+                        <div class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-8">
+                            <div>
+                                <i data-lucide="gem" class="brand-pink w-8 h-8 mb-2"></i>
+                                <h3 class="font-bold text-lg">Nossa Missão</h3>
+                                <p class="text-sm text-gray-500">Fortalecer o desenvolvimento holístico de indivíduos em situação de vulnerabilidade por meio de abordagens solidárias e práticas socioassistenciais, visando promover a autonomia e a inclusão social.
