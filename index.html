@@ -57,9 +57,6 @@
             margin: 10px auto 0;
             border-radius: 2px;
         }
-        .modal {
-            transition: opacity 0.25s ease;
-        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -190,22 +187,44 @@
         
         <!-- Como Ajudar Section -->
         <section id="como-ajudar" class="py-20 md:py-28">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 section-title">Sua ajuda floresce em sorrisos</h2>
-                <div class="flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto">
-                     <!-- Card Doação -->
-                    <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-lg border-t-4 border-brand-pink">
-                         <i data-lucide="heart" class="brand-pink w-12 h-12 mx-auto mb-4"></i>
-                         <h3 class="text-2xl font-bold mb-3">Faça uma Doação</h3>
-                         <p class="text-gray-600 mb-6">Sua contribuição financeira nos permite manter nossos projetos e ampliar nosso alcance. Qualquer valor faz uma grande diferença!</p>
-                         <button id="pix-button" class="bg-brand-pink text-white font-semibold py-3 px-8 rounded-full brand-pink-bg-hover transition duration-300 w-full">Doar via PIX</button>
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">Sua ajuda floresce em sorrisos</h2>
+                <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
+                     <!-- Coluna Doação -->
+                    <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-lg border-t-4 border-brand-pink flex flex-col">
+                        <div class="text-center">
+                            <i data-lucide="heart" class="brand-pink w-12 h-12 mx-auto mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">Faça uma Doação</h3>
+                            <p class="text-gray-600 mb-6">Sua contribuição via PIX nos permite manter nossos projetos. A chave é o nosso CNPJ.</p>
+                        </div>
+                        <div class="relative bg-gray-100 p-3 rounded-md">
+                            <input type="text" id="pix-key" value="33.425.873/0001-03" class="bg-transparent w-full text-center font-mono text-gray-800" readonly>
+                        </div>
+                        <button id="copy-pix-button" class="mt-4 bg-brand-pink text-white font-semibold py-3 px-8 rounded-full brand-pink-bg-hover transition duration-300 w-full flex items-center justify-center">
+                            <i data-lucide="copy" class="w-4 h-4 mr-2"></i>
+                            <span>Copiar Chave PIX</span>
+                        </button>
                     </div>
-                    <!-- Card Voluntariado -->
-                     <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-lg border-t-4 border-brand-teal">
-                         <i data-lucide="users" class="brand-teal w-12 h-12 mx-auto mb-4"></i>
-                         <h3 class="text-2xl font-bold mb-3">Seja um Voluntário</h3>
-                         <p class="text-gray-600 mb-6">Doe seu tempo e talento! Temos diversas frentes de atuação onde suas habilidades podem florescer e ajudar a quem precisa.</p>
-                         <button id="volunteer-button" class="bg-brand-teal text-white font-semibold py-3 px-8 rounded-full brand-teal-bg-hover transition duration-300 w-full">Quero ser voluntário</button>
+                    <!-- Coluna Voluntariado -->
+                     <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-lg border-t-4 border-brand-teal flex flex-col">
+                        <div class="text-center">
+                             <i data-lucide="users" class="brand-teal w-12 h-12 mx-auto mb-4"></i>
+                             <h3 class="text-2xl font-bold mb-3">Seja um Voluntário</h3>
+                             <p class="text-gray-600 mb-6">Deixe seu contato e entraremos em contato para falar sobre as oportunidades de voluntariado.</p>
+                        </div>
+                        <form class="flex-grow flex flex-col">
+                            <div class="mb-4 text-left">
+                                <label for="volunteer-name" class="block text-gray-700 text-sm font-bold mb-2">Nome Completo:</label>
+                                <input type="text" id="volunteer-name" name="volunteer-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-brand-teal" required>
+                            </div>
+                            <div class="mb-6 text-left">
+                                <label for="volunteer-phone" class="block text-gray-700 text-sm font-bold mb-2">Telefone (WhatsApp):</label>
+                                <input type="tel" id="volunteer-phone" name="volunteer-phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-brand-teal" required>
+                            </div>
+                            <button type="submit" class="mt-auto bg-brand-teal text-white font-bold py-3 px-10 rounded-full brand-teal-bg-hover transition duration-300 w-full">
+                                Quero Ajudar
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -283,51 +302,6 @@
         </div>
     </footer>
 
-    <!-- PIX Modal -->
-    <div id="pix-modal" class="modal fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
-        <div class="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full relative">
-            <button id="close-pix-modal" class="absolute top-2 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
-            <div class="text-center">
-                <i data-lucide="qr-code" class="brand-pink w-16 h-16 mx-auto mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Doe com PIX</h3>
-                <p class="text-gray-600 mb-4">Use a chave abaixo (CNPJ) para doar qualquer valor. Sua ajuda é muito importante!</p>
-                <div class="relative bg-gray-100 p-3 rounded-md">
-                    <input type="text" id="pix-key" value="33.425.873/0001-03" class="bg-transparent w-full text-center font-mono text-gray-800" readonly>
-                </div>
-                <button id="copy-pix-button" class="mt-4 bg-brand-pink text-white font-semibold py-3 px-8 rounded-full brand-pink-bg-hover transition duration-300 w-full flex items-center justify-center">
-                    <i data-lucide="copy" class="w-4 h-4 mr-2"></i>
-                    <span>Copiar Chave PIX</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Volunteer Modal -->
-    <div id="volunteer-modal" class="modal fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
-        <div class="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full relative">
-            <button id="close-volunteer-modal" class="absolute top-2 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
-            <div class="text-center">
-                <i data-lucide="heart-handshake" class="brand-teal w-16 h-16 mx-auto mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Seja Voluntário!</h3>
-                <p class="text-gray-600 mb-6">Deixe seu contato e entraremos em contato para falar sobre as oportunidades.</p>
-                <form>
-                    <div class="mb-4 text-left">
-                        <label for="volunteer-name" class="block text-gray-700 text-sm font-bold mb-2">Nome Completo:</label>
-                        <input type="text" id="volunteer-name" name="volunteer-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-brand-teal" required>
-                    </div>
-                    <div class="mb-6 text-left">
-                        <label for="volunteer-phone" class="block text-gray-700 text-sm font-bold mb-2">Telefone (WhatsApp):</label>
-                        <input type="tel" id="volunteer-phone" name="volunteer-phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-brand-teal" required>
-                    </div>
-                    <button type="submit" class="bg-brand-teal text-white font-bold py-3 px-10 rounded-full brand-teal-bg-hover transition duration-300 w-full">
-                        Quero Ajudar
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
     <script>
         // Lucide Icons
         lucide.createIcons();
@@ -368,52 +342,39 @@
             });
         });
 
-        // --- MODAL LOGIC ---
-
-        // PIX Modal
-        const pixModal = document.getElementById('pix-modal');
-        const pixButton = document.getElementById('pix-button');
-        const closePixModalButton = document.getElementById('close-pix-modal');
+        // --- PIX Copy Logic ---
         const copyPixButton = document.getElementById('copy-pix-button');
         const pixKeyInput = document.getElementById('pix-key');
-
-        pixButton.addEventListener('click', () => pixModal.classList.remove('hidden'));
-        closePixModalButton.addEventListener('click', () => pixModal.classList.add('hidden'));
-        pixModal.addEventListener('click', (e) => {
-            if (e.target === pixModal) {
-                pixModal.classList.add('hidden');
-            }
-        });
 
         copyPixButton.addEventListener('click', () => {
             pixKeyInput.select();
             pixKeyInput.setSelectionRange(0, 99999); // For mobile devices
             try {
-                document.execCommand('copy');
-                const originalText = copyPixButton.innerHTML;
-                copyPixButton.innerHTML = '<i data-lucide="check" class="w-4 h-4 mr-2"></i> <span>Copiado!</span>';
-                lucide.createIcons();
-                setTimeout(() => {
-                    copyPixButton.innerHTML = originalText;
-                    lucide.createIcons();
-                }, 2000);
+                // Use the Clipboard API for modern browsers
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(pixKeyInput.value).then(() => {
+                        updateCopyButton();
+                    });
+                } else {
+                    // Fallback for older browsers
+                    document.execCommand('copy');
+                    updateCopyButton();
+                }
             } catch (err) {
-                alert('Não foi possível copiar a chave.');
+                // Fallback if execCommand also fails
+                alert('Não foi possível copiar a chave. Por favor, copie manualmente.');
             }
         });
-        
-        // Volunteer Modal
-        const volunteerModal = document.getElementById('volunteer-modal');
-        const volunteerButton = document.getElementById('volunteer-button');
-        const closeVolunteerModalButton = document.getElementById('close-volunteer-modal');
 
-        volunteerButton.addEventListener('click', () => volunteerModal.classList.remove('hidden'));
-        closeVolunteerModalButton.addEventListener('click', () => volunteerModal.classList.add('hidden'));
-        volunteerModal.addEventListener('click', (e) => {
-             if (e.target === volunteerModal) {
-                volunteerModal.classList.add('hidden');
-            }
-        });
+        function updateCopyButton() {
+            const originalText = copyPixButton.innerHTML;
+            copyPixButton.innerHTML = '<i data-lucide="check" class="w-4 h-4 mr-2"></i> <span>Copiado!</span>';
+            lucide.createIcons();
+            setTimeout(() => {
+                copyPixButton.innerHTML = originalText;
+                lucide.createIcons();
+            }, 2000);
+        }
 
     </script>
 </body>
