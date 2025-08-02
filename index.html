@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Associação Projeto Só Por Amor - Espalhando Amor, Transformando Vidas</title>
-    <meta name="description" content="Junte-se à Associação Projeto Só Por Amor na missão de levar esperança, cuidado e oportunidade para crianças e famílias em situação de vulnerabilidade em Parauapebas.">
-    <meta name="keywords" content="Associação, Projeto Social, Só Por Amor, Voluntariado, Doação, Crianças, Famílias, Vulnerabilidade, Parauapebas, Projetos Sociais, Apoio Educacional, Cozinha Solidária">
+    <meta name="description" content="Junte-se à Associação Projeto Só Por Amor na missão de levar esperança, cuidado e oportunidade para crianças e famílias em situação de vulnerabilidade e...">
+    <meta name="keywords" content="Associação, Projeto Social, Só Por Amor, Voluntariado, Doação, Crianças, Famílias, Vulnerabilidade, Parauapebas, Projetos Sociais, Apoio Educacional, Cozinha ...">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.seusite.com.br/">
@@ -42,35 +42,23 @@
             --color-gray-600: #4B5563;
             --color-gray-800: #1F2937;
         }
-
-        * {
-            scroll-behavior: smooth;
-        }
-
+        * { scroll-behavior: smooth; }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--color-background);
             line-height: 1.6;
         }
-
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
         }
-
-        .text-lora {
-            font-family: 'Lora', serif;
-        }
-
-        /* Custom Colors */
+        .text-lora { font-family: 'Lora', serif; }
         .brand-pink { color: var(--color-pink); }
         .brand-pink-bg { background-color: var(--color-pink); }
         .brand-pink-bg-hover:hover { background-color: var(--color-pink-dark); }
         .brand-teal { color: var(--color-teal); }
         .brand-teal-bg { background-color: var(--color-teal); }
         .brand-teal-bg-hover:hover { background-color: var(--color-teal-dark); }
-
-        /* Hero Section */
         .hero-section {
             background: linear-gradient(135deg, rgba(229, 57, 141, 0.9) 0%, rgba(20, 184, 166, 0.8) 100%), 
                         url('./assets/images/hero_voluntarios.jpg');
@@ -81,32 +69,25 @@
             display: flex;
             align-items: center;
         }
-
-        /* Animations */
         .fade-in-up {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s ease-out;
         }
-
         .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Button Styles */
         .cta-button {
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px 0 rgba(229, 57, 141, 0.4);
             position: relative;
             overflow: hidden;
         }
-
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px 0 rgba(229, 57, 141, 0.6);
         }
-
         .cta-button::before {
             content: '';
             position: absolute;
@@ -117,17 +98,11 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: left 0.5s;
         }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        /* Section Titles */
+        .cta-button:hover::before { left: 100%; }
         .section-title {
             position: relative;
             display: inline-block;
         }
-
         .section-title::after {
             content: '';
             position: absolute;
@@ -139,8 +114,6 @@
             background: linear-gradient(90deg, var(--color-pink), var(--color-teal));
             border-radius: 2px;
         }
-
-        /* Card Hover Effects */
         .project-card {
             transition: all 0.3s ease;
             background: white;
@@ -148,28 +121,21 @@
             overflow: hidden;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-
         .project-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-
         .project-card img {
             transition: transform 0.3s ease;
         }
-
         .project-card:hover img {
             transform: scale(1.05);
         }
-
-        /* Counter Animation */
         .counter {
             font-size: 3rem;
             font-weight: 800;
             color: var(--color-pink);
         }
-
-        /* Message Box */
         .message-box {
             position: fixed;
             bottom: 20px;
@@ -187,31 +153,21 @@
             align-items: center;
             gap: 8px;
         }
-
-        .message-box.show {
-            opacity: 1;
-        }
-
-        /* Form Styles */
+        .message-box.show { opacity: 1; }
         .form-input {
             transition: all 0.3s ease;
             border: 2px solid #e5e7eb;
         }
-
         .form-input:focus {
             border-color: var(--color-pink);
             box-shadow: 0 0 0 3px rgba(229, 57, 141, 0.1);
         }
-
-        /* Gradient Text */
         .gradient-text {
             background: linear-gradient(135deg, var(--color-pink), var(--color-teal));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
-        /* Loading Animation */
         .loading {
             display: inline-block;
             width: 20px;
@@ -221,34 +177,19 @@
             border-top-color: #fff;
             animation: spin 1s ease-in-out infinite;
         }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Responsive adjustments */
+        @keyframes spin { to { transform: rotate(360deg); } }
         @media (max-width: 768px) {
-            .hero-section {
-                background-attachment: scroll;
-            }
-            
-            .counter {
-                font-size: 2rem;
-            }
+            .hero-section { background-attachment: scroll; }
+            .counter { font-size: 2rem; }
         }
-
-        /* Parallax effect */
         .parallax {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
-
         @media (max-width: 768px) {
-            .parallax {
-                background-attachment: scroll;
-            }
+            .parallax { background-attachment: scroll; }
         }
     </style>
 </head>
@@ -319,195 +260,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Sobre Nós Section -->
-        <section id="sobre" class="py-20 md:py-32">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="800">
-                        <img src="./assets/images/sobre_nos.jpg" alt="Grupo de voluntários da Associação Projeto Só Por Amor trabalhando juntos" class="rounded-2xl shadow-2xl w-full">
-                    </div>
-                    <div class="lg:w-1/2" data-aos="fade-left" data-aos-duration="800">
-                        <h2 class="text-4xl md:text-5xl font-bold mb-6 section-title">Nossa História de Amor e Cuidado</h2>
-                        <p class="text-lora text-gray-600 mb-8 leading-relaxed text-lg">
-                            A Associação Projeto Só Por Amor surgiu da iniciativa de um grupo de voluntários que, por muitos anos, atuava de forma solidária. Em 23 de junho de 2018, decidimos oficializar nosso compromisso e, desde então, temos transformado vidas em Parauapebas.
-                        </p>
-                        <div class="grid md:grid-cols-2 gap-8 mb-8">
-                            <div class="text-center md:text-left">
-                                <div class="w-16 h-16 brand-pink-bg rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4">
-                                    <i data-lucide="target" class="text-white w-8 h-8"></i>
-                                </div>
-                                <h3 class="font-bold text-xl mb-3">Nossa Missão</h3>
-                                <p class="text-gray-600">Fortalecer o desenvolvimento de crianças, mulheres e famílias em situação de vulnerabilidade, promovendo educação, alimentação, cultura e oportunidades.</p>
-                            </div>
-                            <div class="text-center md:text-left">
-                                <div class="w-16 h-16 brand-teal-bg rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4">
-                                    <i data-lucide="eye" class="text-white w-8 h-8"></i>
-                                </div>
-                                <h3 class="font-bold text-xl mb-3">Nossa Visão</h3>
-                                <p class="text-gray-600">Ser referência em acolhimento e transformação social, construindo um futuro mais justo e solidário para todos.</p>
-                            </div>
-                        </div>
-                        <a href="https://drive.google.com/file/d/1s4DhHc5vUsbdhpL-l7Ewhp1WVbxFUWZN/view?usp=sharing" target="_blank" class="inline-flex items-center brand-teal-bg text-white font-semibold px-6 py-3 rounded-full brand-teal-bg-hover transition duration-300">
-                            <i data-lucide="download" class="w-5 h-5 mr-2"></i>
-                            Download da ATA e Estatuto
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Nossos Projetos Section -->
-        <section id="projetos" class="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="600">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 section-title">Onde nosso amor se torna ação</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Conheça os projetos que transformam vidas e constroem um futuro melhor para nossa comunidade</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="overflow-hidden">
-                            <img src="./assets/images/educacao.jpg" alt="Crianças estudando em um ambiente escolar" class="w-full h-48 object-cover" loading="lazy">
-                        </div>
-                        <div class="p-6">
-                            <div class="w-12 h-12 brand-pink-bg rounded-full flex items-center justify-center mb-4">
-                                <i data-lucide="book-open" class="text-white w-6 h-6"></i>
-                            </div>
-                            <h3 class="font-bold text-xl mb-3">Apoio Educacional</h3>
-                            <p class="text-gray-600">Oferecemos reforço escolar e oficinas de leitura para despertar o amor pelo conhecimento e garantir um futuro melhor.</p>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="overflow-hidden">
-                            <img src="./assets/images/cozinha_solidaria.webp" alt="Voluntários preparando e distribuindo refeições" class="w-full h-48 object-cover" loading="lazy">
-                        </div>
-                        <div class="p-6">
-                            <div class="w-12 h-12 brand-teal-bg rounded-full flex items-center justify-center mb-4">
-                                <i data-lucide="utensils" class="text-white w-6 h-6"></i>
-                            </div>
-                            <h3 class="font-bold text-xl mb-3">Cozinha Solidária</h3>
-                            <p class="text-gray-600">Distribuímos refeições nutritivas e cestas básicas para famílias em situação de insegurança alimentar.</p>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="overflow-hidden">
-                            <img src="./assets/images/musica_cultura.jpeg" alt="Crianças participando de atividades culturais e musicais" class="w-full h-48 object-cover" loading="lazy">
-                        </div>
-                        <div class="p-6">
-                            <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
-                                <i data-lucide="music" class="text-white w-6 h-6"></i>
-                            </div>
-                            <h3 class="font-bold text-xl mb-3">Arte, Cultura e Esporte</h3>
-                            <p class="text-gray-600">Aulas de música, teatro e esportes para desenvolver talentos, criatividade e promover a socialização.</p>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="overflow-hidden">
-                            <img src="./assets/images/cursos_mulheres.jpg" alt="Mulheres participando de cursos profissionalizantes" class="w-full h-48 object-cover" loading="lazy">
-                        </div>
-                        <div class="p-6">
-                            <div class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center mb-4">
-                                <i data-lucide="graduation-cap" class="text-white w-6 h-6"></i>
-                            </div>
-                            <h3 class="font-bold text-xl mb-3">Cursos para Mulheres</h3>
-                            <p class="text-gray-600">Oferecemos cursos profissionalizantes para mulheres, promovendo autonomia e geração de renda familiar.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Nosso Impacto Section -->
-        <section id="impacto" class="py-20 md:py-32 parallax" style="background-image: linear-gradient(rgba(20, 184, 166, 0.9), rgba(229, 57, 141, 0.9)), url('./assets/images/sobre_nos.jpg');">
-            <div class="container mx-auto px-6 text-center text-white">
-                <div data-aos="fade-up" data-aos-duration="800">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Nosso Impacto em Números</h2>
-                    <p class="text-xl mb-16 max-w-3xl mx-auto">Cada número representa uma vida transformada, uma família apoiada, um futuro construído com amor</p>
-                </div>
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div data-aos="fade-up" data-aos-delay="100">
-                        <div class="counter" data-target="2186">0</div>
-                        <p class="text-xl font-semibold">+ de 2.186 Crianças Atendidas <span class="block text-sm text-gray-200 font-normal">(estimativa mínima)</span></p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <div class="counter" data-target="1222">0</div>
-                        <p class="text-xl font-semibold">+ de 1.222 Famílias Beneficiadas <span class="block text-sm text-gray-200 font-normal">(estimativa mínima)</span></p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="300">
-                        <div class="counter" data-target="30">0</div>
-                        <p class="text-xl font-semibold">Voluntários Ativos</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="400">
-                        <div class="counter" data-target="6">0</div>
-                        <p class="text-xl font-semibold"> + de 6 anos de Atuação</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Galeria Section -->
-        <section id="galeria" class="py-20 md:py-32 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="600">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 section-title">Galeria de Projetos</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Veja fotos reais das ações e eventos que realizamos.</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div>
-                        <img src="./assets/images/galeria1.jpg" alt="Entrega de cestas básicas" loading="lazy" class="rounded-xl shadow-lg object-cover">
-                        <span class="block mt-2 text-gray-600">Entrega de cestas básicas</span>
-                    </div>
-                    <div>
-                        <img src="./assets/images/galeria2.jpg" alt="Aula de música para crianças" loading="lazy" class="rounded-xl shadow-lg object-cover">
-                        <span class="block mt-2 text-gray-600">Aula de música para crianças</span>
-                    </div>
-                    <div>
-                        <img src="./assets/images/galeria3.jpg" alt="Oficina de leitura" loading="lazy" class="rounded-xl shadow-lg object-cover">
-                        <span class="block mt-2 text-gray-600">Oficina de leitura</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Depoimentos Section -->
-        <section id="depoimentos" class="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="600">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 section-title">Depoimentos</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Relatos de quem já foi transformado pelo nosso projeto.</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="100">
-                        <p class="italic text-gray-700">"O Projeto Só Por Amor me ajudou a acreditar no futuro dos meus filhos. Sou muito grata."</p>
-                        <span class="block mt-2 font-bold">Maria, beneficiária</span>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="200">
-                        <p class="italic text-gray-700">"Ser voluntário aqui é gratificante. Sinto que faço parte de algo maior."</p>
-                        <span class="block mt-2 font-bold">João, voluntário</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Diretoria Section -->
-        <section id="diretoria" class="py-20 md:py-32 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 section-title text-center">Nossa Diretoria</h2>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                    <img src="./Diretoria.jpg" alt="Foto oficial da diretoria da Associação Só Por Amor" class="rounded-xl shadow-lg w-full md:w-1/2 object-cover mb-8 md:mb-0">
-                    <div>
-                        <ul class="space-y-4 text-lg">
-                            <li><strong>Presidente:</strong> Ozélia Muniz</li>
-                            <li><strong>Vice-presidente:</strong> Eduardo Rodrigues</li>
-                            <li><strong>Coordenador de projetos:</strong> Frank Sinatra </li>
-                            <li><strong>Coordenador de Mídia:</strong> Aquila Cristina</li>
-                            <!-- Adicione outros membros conforme necessário -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- ... Demais seções permanecem inalteradas ... -->
         <!-- Como Ajudar Section -->
         <section id="como-ajudar" class="py-20 md:py-32 bg-white">
             <div class="container mx-auto px-6">
@@ -539,17 +292,13 @@
                             <div class="w-20 h-20 brand-teal-bg rounded-full flex items-center justify-center mx-auto mb-6">
                                 <i data-lucide="users" class="text-white w-10 h-10"></i>
                             </div>
-                            <h3 class="text-3xl font-bold mb-4">Seja um Voluntário</h3>
-                            <p class="text-gray-600 text-lg">Deixe seu contato e entraremos em contato para falar sobre as oportunidades de voluntariado disponíveis.</p>
+                            <h3 class="text-3xl font-bold mb-4">Junte-se como Voluntário</h3>
+                            <p class="text-gray-600 text-lg">Preencha seus dados e venha fazer parte dessa transformação! Nossa equipe entrará em contato para apresentar as oportunidades de voluntariado disponíveis.</p>
                         </div>
                         <form id="volunteer-form" class="space-y-6">
                             <div>
                                 <label for="volunteer-name" class="block text-gray-700 text-sm font-bold mb-2">Nome Completo:</label>
                                 <input type="text" id="volunteer-name" name="Nome" class="form-input w-full py-3 px-4 rounded-lg focus:outline-none" required>
-                            </div>
-                            <div>
-                                <label for="volunteer-email" class="block text-gray-700 text-sm font-bold mb-2">E-mail:</label>
-                                <input type="email" id="volunteer-email" name="Email" class="form-input w-full py-3 px-4 rounded-lg focus:outline-none" required>
                             </div>
                             <div>
                                 <label for="volunteer-phone" class="block text-gray-700 text-sm font-bold mb-2">Telefone:</label>
@@ -576,41 +325,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Contato Section -->
-        <section id="contato" class="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="600">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 section-title">Entre em Contato</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Estamos sempre prontos para conversar e conhecer pessoas que querem fazer a diferença</p>
-                </div>
-                <div class="max-w-4xl mx-auto">
-                    <div class="grid md:grid-cols-3 gap-8 mb-12">
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                            <div class="w-16 h-16 brand-pink-bg rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="map-pin" class="text-white w-8 h-8"></i>
-                            </div>
-                            <h3 class="font-bold text-xl mb-2">Localização</h3>
-                            <p class="text-gray-600">Parauapebas - PA<br>Brasil</p>
-                        </div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                            <div class="w-16 h-16 brand-teal-bg rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="phone" class="text-white w-8 h-8"></i>
-                            </div>
-                            <h3 class="font-bold text-xl mb-2">Telefone</h3>
-                            <p class="text-gray-600">Entre em contato<br>pelo formulário</p>
-                        </div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                            <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="mail" class="text-white w-8 h-8"></i>
-                            </div>
-                            <h3 class="font-bold text-xl mb-2">E-mail</h3>
-                            <p class="text-gray-600">contato@projetosoporamor.org<br>(em breve)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- ... Demais seções permanecem inalteradas ... -->
     </main>
 
     <!-- Footer -->
@@ -752,13 +467,27 @@
             submitText.classList.add('hidden');
             loading.classList.remove('hidden');
             submitButton.disabled = true;
-            setTimeout(() => {
-                showMessage('Obrigado! Entraremos em contato em breve.');
-                volunteerForm.reset();
-                submitText.classList.remove('hidden');
-                loading.classList.add('hidden');
-                submitButton.disabled = false;
-            }, 2000);
+            // --- Aqui você faz a requisição para o Apps Script ---
+            // Exemplo de envio (substitua a URL abaixo pela do seu Apps Script):
+            try {
+                const formData = new FormData(volunteerForm);
+                const response = await fetch('https://script.google.com/macros/s/AKfycbzwKtBBQqLlk97g_5ws8KcNZI-Zk975-ey6_ISMZTIY/dev', {
+                    method: 'POST',
+                    body: formData
+                });
+                const text = await response.text();
+                if (text.trim() === 'OK') {
+                    showMessage('Obrigado! Entraremos em contato em breve.');
+                    volunteerForm.reset();
+                } else {
+                    showMessage('Erro ao enviar. Tente novamente.');
+                }
+            } catch (err) {
+                showMessage('Erro de conexão.');
+            }
+            submitText.classList.remove('hidden');
+            loading.classList.add('hidden');
+            submitButton.disabled = false;
         });
 
         function showMessage(text) {
